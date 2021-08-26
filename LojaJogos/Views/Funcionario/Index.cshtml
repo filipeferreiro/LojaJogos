@@ -1,0 +1,97 @@
+﻿@model LojaJogos.Models.Funcionario
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend> Cadastro de funcionarios</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CodFuncionario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CodFuncionario)
+            @Html.ValidationMessageFor(model => model.CodFuncionario)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NomeFuncionario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NomeFuncionario)
+            @Html.ValidationMessageFor(model => model.NomeFuncionario)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CPFFuncionario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CPFFuncionario)
+            @Html.ValidationMessageFor(model => model.CPFFuncionario)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RGFuncionario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RGFuncionario)
+            @Html.ValidationMessageFor(model => model.RGFuncionario)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NascFuncionario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NascFuncionario)
+            @Html.ValidationMessageFor(model => model.NascFuncionario)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EnderecoFuncionario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EnderecoFuncionario)
+            @Html.ValidationMessageFor(model => model.EnderecoFuncionario)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CelFuncionario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CelFuncionario)
+            @Html.ValidationMessageFor(model => model.CelFuncionario)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailFuncionario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmailFuncionario)
+            @Html.ValidationMessageFor(model => model.EmailFuncionario)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CargoFuncionario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CargoFuncionario)
+            @Html.ValidationMessageFor(model => model.CargoFuncionario)
+        </div>
+        <div>
+            <br />
+            <input type="submit" value="Enviar!" />
+        </div>
+    </fieldset>
+
+    @section Scripts {
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+        @Scripts.Render("~/bundles/jqueryval");
+        <script>
+            $(function () {
+                $('#CodFuncionario').mask('000-000');
+                $('#NascFuncionario').mask('00/00/0000');
+                $('#CPFFuncionario').mask('000.000.000-00');
+                $('#RGFuncionario').mask('00.000.000-0');
+                $("#CelFuncionario").mask("(99) 99999-9999");
+
+            });
+
+        </script>
+    }
+}
+

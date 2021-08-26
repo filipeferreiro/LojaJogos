@@ -1,0 +1,72 @@
+﻿@model LojaJogos.Models.Cliente
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend> Cadastro de Clientes</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NomeCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NomeCliente)
+            @Html.ValidationMessageFor(model => model.NomeCliente)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CPFCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CPFCliente)
+            @Html.ValidationMessageFor(model => model.CPFCliente)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NascCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NascCliente)
+            @Html.ValidationMessageFor(model => model.NascCliente)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EnderecoCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EnderecoCliente)
+            @Html.ValidationMessageFor(model => model.EnderecoCliente)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CelCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CelCliente)
+            @Html.ValidationMessageFor(model => model.CelCliente)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmailCliente)
+            @Html.ValidationMessageFor(model => model.EmailCliente)
+        </div>
+        <div>
+            <br />
+            <input type="submit" value="Enviar!" />
+        </div>
+    </fieldset>
+
+    @section Scripts {
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+        @Scripts.Render("~/bundles/jqueryval");
+        <script>
+            $(function () {
+                $('#CPFCliente').mask('000.000.000-00');
+                $('#NascCliente').mask('00/00/0000');
+                $("#CelCliente").mask("(99) 99999-9999");
+
+            });
+
+        </script>
+    }
+}
