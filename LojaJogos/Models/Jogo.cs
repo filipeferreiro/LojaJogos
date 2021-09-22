@@ -31,7 +31,7 @@ namespace LojaJogos.Models
         [Display(Name = "Faixa etária do jogo")]
         [Required(ErrorMessage = "O campo faixa etária é obrigatório.")]
         [Range(0, 18, ErrorMessage = "Insira uma faixa entre 0 (livre) e 18")]
-        public int EtariaJogo { get; set; }
+        public string EtariaJogo { get; set; }
 
         [Display(Name = "Plataforma do jogo")]
         [Required(ErrorMessage = "O campo plataforma é obrigatório.")]
@@ -40,7 +40,7 @@ namespace LojaJogos.Models
         [Display(Name = "Ano do jogo")]
         [Required(ErrorMessage = "O campo ano de lançamento é obrigatório.")]
         [RegularExpression(@"(^[0-9]{4})")]
-        public int AnoJogo { get; set; }
+        public string AnoJogo { get; set; }
 
         [Display(Name = "Sinopse do jogo")]
         public string SinopseJogo { get; set; }

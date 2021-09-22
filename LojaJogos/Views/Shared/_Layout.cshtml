@@ -22,9 +22,12 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Funcionários","Index","Funcionario")</li>
-                    <li>@Html.ActionLink("Clientes","Index","Cliente")</li>
-                    <li>@Html.ActionLink("Jogos","Index","Jogo")</li>
+                    <li>@Html.ActionLink("Funcionários", "Index", "Funcionario")</li>
+                    <li>@Html.ActionLink("Listar Funcionários", "ListarFuncionario", "Funcionario")</li>
+                    <li>@Html.ActionLink("Clientes", "Index", "Cliente")</li>
+                    <li>@Html.ActionLink("Listar Clientes", "ListarCliente", "Cliente")</li>
+                    <li>@Html.ActionLink("Jogos", "Index", "Jogo")</li>
+                    <li>@Html.ActionLink("Listar Jogos", "ListarJogos", "Jogo")</li>
                 </ul>
             </div>
         </div>
@@ -33,7 +36,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - 2DS Loja de Jogos</p>
+            <p>&copy; @DateTime.Now.Year - 2º DS Loja de Jogos</p>
         </footer>
     </div>
 

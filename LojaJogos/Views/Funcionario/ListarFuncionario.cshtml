@@ -1,0 +1,70 @@
+﻿@model IEnumerable<LojaJogos.Models.Funcionario>
+@{
+    ViewBag.Title = "Listar Funcionario";
+}
+
+<h2>Funcionarios cadastrados</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CodFuncionario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeFuncionario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPFFuncionario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RGFuncionario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NascFuncionario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnderecoFuncionario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelFuncionario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailFuncionario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CargoFuncionario)
+        </th>
+    </tr>
+    @foreach(var item in Model)
+     {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodFuncionario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeFuncionario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPFFuncionario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RGFuncionario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NascFuncionario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnderecoFuncionario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CelFuncionario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailFuncionario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CargoFuncionario)
+            </td>
+        </tr>
+     }
+</table>

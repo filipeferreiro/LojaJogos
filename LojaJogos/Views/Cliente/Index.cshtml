@@ -3,11 +3,11 @@
     ViewBag.Title = "Index";
 }
 
-@using (Html.BeginForm())
+<h3>Cadastrar Cliente</h3>
+@using (Html.BeginForm("CadCliente", "Cliente", FormMethod.Post))
 {
     @Html.ValidationSummary(true)
     <fieldset>
-        <legend> Cadastro de Clientes</legend>
         <div class="editor-label">
             @Html.LabelFor(model => model.NomeCliente)
         </div>

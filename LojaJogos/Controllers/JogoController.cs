@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LojaJogos.Models;
+using LojaJogos.Repositorio;
 
 namespace LojaJogos.Controllers
 {
@@ -14,19 +15,19 @@ namespace LojaJogos.Controllers
             Jogo jogo = new Jogo();
             return View(jogo);
         }
+        Acoes acoes = new Acoes();
 
         [HttpPost]
-        public ActionResult Index(Jogo jogo)
+        public ActionResult Cadjogo(Jogo jogo)
         {
-            if (ModelState.IsValid)
-            {
-                return View("Listar", jogo);
-            }
+            acoes.CadastrarJogo(jogo);
             return View(jogo);
         }
-        public ActionResult Listar(Jogo jogo)
+        public ActionResult ListarJogos()
         {
-            return View(jogo);
+            var ExibirJogo = new Acoes();
+            var TodosJogos = ExibirJogo.ListarJogo();
+            return View(TodosJogos);
         }
     }
 }

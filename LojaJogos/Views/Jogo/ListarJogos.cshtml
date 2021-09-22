@@ -1,0 +1,71 @@
+﻿@model IEnumerable<LojaJogos.Models.Jogo>
+@{
+    ViewBag.Title = "Listar Jogos";
+}
+
+<h2>Jogos Cadastrados</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CodJogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeJogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VersaoJogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DesJogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GeneroJogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EtariaJogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlatJogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnoJogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SinopseJogo)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodJogo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeJogo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VersaoJogo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DesJogo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeneroJogo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EtariaJogo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlatJogo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnoJogo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SinopseJogo)
+            </td>
+        </tr>
+    }
+</table>
+
